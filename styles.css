@@ -1,0 +1,313 @@
+/*This option for entire html page 
+This is back (2) background */
+html {
+  background-color: black;
+  background-image: url(images/cover1920.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*Only for the body - look what is the difference
+This Background only for S.C. letters */
+body {
+  background-image: url(images/backgroundlogo.png);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  font-size: 100px;
+  color: aqua;
+  text-align: center;
+  /* This for body to be fixed size  */
+  height: 800px;
+}
+/* Nav bar */
+.navul {
+  opacity: 95%;
+  position: -webkit-sticky; /*for Safari*/
+  position: sticky;
+  top: 0;
+  font-size: medium;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 5%;
+  padding: 0;
+  max-width: 420px;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: 0px 0px 30px grey;
+  border: 1px solid thistle;
+  /*round corners of nav bar */
+  border-radius: 50px 50px 50px 50px;
+}
+
+.navli {
+  margin: auto;
+  /* CHANGE THIS TO small screen to none !!!  */
+  /* float: left;
+  display remove  */
+  display: inline-block;
+  align-items: center;
+  max-width: 150px;
+}
+
+.lia {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.lia:hover {
+  background-color: transparent;
+  text-shadow: 0px 0px 50px white;
+}
+#active {
+  float: right;
+}
+.active {
+  background-color: royalblue;
+  /* border: 1px solid thistle; */
+  border-radius: 15px 0px 0px 15px;
+  box-shadow: 0px 0px 20px royalblue;
+}
+
+#boutheader {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 5rem;
+  color: azure;
+}
+#boutp {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 5%;
+  padding-bottom: 10%;
+  color: rgb(255, 255, 255);
+}
+#contdiv {
+  margin-right: 25%;
+  margin-left: 25%;
+}
+#contact {
+  background: rgba(14, 5, 133, 0.3);
+  font-size: 45px;
+  border: 1px solid purple;
+  border-radius: 50px;
+  /*Defines animation description*/
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/*Add keyframes to animation from to */
+@keyframes anim {
+  from {
+    background: rgba(14, 5, 133, 0.3);
+    box-shadow: 0px 0px 200px #4b0585;
+  }
+  to {
+    background: rgba(0, 92, 230, 0.8);
+    box-shadow: 0px 0px 200px royalblue;
+  }
+}
+
+#contact:hover {
+  color: white;
+  background-color: #212f3d;
+  border: 1px solid white;
+  box-shadow: 0px 0px 200px royalblue;
+}
+
+.mainhead {
+  padding-top: 5%;
+  margin: 2%;
+  color: white;
+  font-size: 100px;
+  text-shadow: 5px 5px 5px white;
+}
+#projheader {
+  padding-top: 3%;
+  font-size: 75px;
+  color: lightyellow;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+#proj {
+  padding-top: 1%;
+  font-size: 30px;
+  color: #03ffe3;
+  margin-bottom: 5%;
+}
+
+#projback {
+  box-shadow: 0px 0px 100px grey;
+  background: rgba(37, 35, 59, 0.3);
+  border: 1px solid white;
+  border-radius: 50px;
+  text-align: left;
+  font-size: 2rem;
+  margin: 10%;
+  color: paleturquoise;
+  animation-name: animproj;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes animproj {
+  from {
+    box-shadow: 0px 0px 200px #4b0585;
+  }
+  to {
+    box-shadow: 0px 0px 200px royalblue;
+  }
+}
+/*TODO: responsive make color with no opacity */
+#deviz {
+  margin: 10%;
+  max-height: 40%;
+  font-size: 150px;
+  font-family: "Dancing Script", cursive;
+  opacity: 20%;
+}
+#deviz:hover {
+  color: skyblue;
+  opacity: 100%;
+}
+.contimg {
+  width: 42px;
+  height: 42px;
+}
+/* -------------------- */
+/* this makes the foot always be stick to 
+the bottom of the page  */
+footer {
+  background-color: #111;
+  border-top: 0.1px solid white;
+  position: fixed;
+  font-size: 1rem;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/
+  height: 3%;
+  margin-left: 0%;
+}
+
+/* Responsive changes  */
+/* Laptops */
+@media screen and (max-width: 1366px) {
+  body {
+    background-size: 100%;
+    height: auto;
+    margin-bottom: 5%;
+  }
+  #deviz {
+    padding-top: 10%;
+    font-size: 100px;
+  }
+  #contact {
+    font-size: 25px;
+  }
+  .contimg {
+    width: 30px;
+    height: auto;
+  }
+  #projback {
+    font-size: 1.2rem;
+  }
+  #boutheader {
+    font-size: 3rem;
+  }
+  #boutp {
+    font-size: 1rem;
+  }
+}
+/* Tablets */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 100%;
+    font-size: 75px;
+  }
+  #deviz {
+    padding-top: 10%;
+    font-size: 75px;
+  }
+  footer {
+    font-size: 0.7rem;
+  }
+  #projheader {
+    font-size: 30px;
+  }
+  #proj {
+    font-size: 20px;
+  }
+  #projback {
+    font-size: 0.8rem;
+  }
+}
+/* Mobile big screen */
+@media screen and (max-width: 600px) {
+  html {
+    background-image: url(images/MyCover1080.png);
+  }
+  body {
+    background-size: 100%;
+    height: 700px;
+    font-size: 50px;
+  }
+  #proj {
+    font-size: 18px;
+  }
+  #contact {
+    font-size: 20px;
+  }
+  .contimg {
+    width: 20px;
+    height: auto;
+  }
+  #boutheader {
+    margin-top: 5%;
+  }
+  #contdiv {
+    margin-top: 30%;
+  }
+}
+/* Mobile 16:9 */
+@media screen and (max-width: 400px) {
+  html {
+    background-image: url(images/MyCover1080.png);
+  }
+  .navul {
+    font-size: 10px;
+  }
+  a.lia {
+    font-size: 10px;
+  }
+  footer {
+    font-size: 0.7rem;
+  }
+  #projback {
+    margin: auto;
+    font-size: 0.6rem;
+    word-break: normal;
+  }
+  #boutheader {
+    margin-top: 15%;
+    font-size: medium;
+  }
+  #boutp {
+    font-size: small;
+  }
+  #contdiv {
+    margin: auto;
+    margin-top: 50%;
+  }
+  #deviz {
+    padding-top: 20%;
+    font-size: 75px;
+  }
+}
